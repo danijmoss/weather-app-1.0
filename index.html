@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Local Weather App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="container">
+  <!-- Month and Year -->
+  <div class="row">
+    <div class="col-md-6">
+      
+    </div>
+    <div class="col-md-6">
+<!--       <h1 id="weekSummary" class="text-left"></h1> -->
+      <p id="monthNum"></p>
+      <p id="year"></p>
+    </div>
+  </div>
+  <!-- END Month and Year -->
+
+  <!-- Weather Forecast -->
+  <div id="weather">
+    <div class="row">
+      
+      <!-- Today -->
+      <div id="currentDay" class="col-md-2">
+        <div class="thumbnail current-thumbnail">
+          <div class="row">
+            <div class="col-sm-12">
+              <p class="time text-center"></p>
+              <p class="location text-center"></p>
+              <button id="convertTemp" class="btn btn-default btn-block" role="button">Convert F&deg; / C&deg;</button>
+            </div>
+          </div>
+          <p class="text-uppercase text-center"><span id="today" class="forecastToday"></span> <br /> <span id="todayNum" class="forecastNumToday"></span></p>
+           <p id="icon" class="icon text-center"></p>
+           <p id="temp" class="temp text-center"></p>
+        </div>
+      </div>
+      <!-- END Today -->
+      
+      <!-- Tomorrow Weekday -->
+      <div class="col-md-2">
+        <div class="thumbnail">
+          <p class="text-uppercase text-center"><span id="tomorrow" class="forecastDay"></span> <br /> <span id="tomorrowNum" class="forecastNum"></span></p>
+           <p id="icon02" class="icon-upcoming text-center"></p>
+           <p id="temp02" class="temp-upcoming text-center"></p>
+        </div>
+      </div>
+      <!-- END Tomorrow Weekday -->
+      
+      <!-- Third Weekday -->
+      <div class="col-md-2">
+        <div class="thumbnail">
+          <p class="text-uppercase text-center"><span id="thirdDay" class="forecastDay"></span> <br /> <span id="thirdDayNum" class="forecastNum"></span></p>
+          <p id="icon03" class="icon-upcoming text-center"></p>
+           <p id="temp03" class="temp-upcoming text-center"></p>
+        </div>
+      </div>
+      <!-- END Third Weekday -->
+      
+      <!-- Fourth Weekday -->
+      <div class="col-md-2">
+        <div class="thumbnail">
+          <p class="text-uppercase text-center"><span id="fourthDay" class="forecastDay"></span> <br /> <span id="fourthDayNum" class="forecastNum"></span></p>
+          <p id="icon04" class="icon-upcoming text-center"></p>
+           <p id="temp04" class="temp-upcoming text-center"></p>
+        </div>
+      </div>
+      <!-- END Fourth Weekday -->
+      
+      <!-- Fifth Weekday -->
+      <div class="col-md-2">
+        <div class="thumbnail">
+          <p class="text-uppercase text-center"><span id="fifthDay" class="forecastDay"></span> <br /> <span id="fifthDayNum" class="forecastNum"></span></p>
+          <p id="icon05" class="icon-upcoming text-center"></p>
+           <p id="temp05" class="temp-upcoming text-center"></p>
+        </div>
+      </div>
+      <!-- END Fifth Weekday -->
+      
+      <!-- Sixth Weekday -->
+      <div class="col-md-2">
+        <div class="thumbnail">
+          <p class="text-uppercase text-center"><span id="sixthDay" class="forecastDay"></span> <br /> <span id="sixthDayNum" class="forecastNum"></span></p>
+          <p id="icon06" class="icon-upcoming text-center"></p>
+           <p id="temp06" class="temp-upcoming text-center"></p>
+        </div>
+      </div>
+      <!-- END Sixth Weekday -->
+      
+    </div>
+  </div>
+  <!-- END Weather Forecast -->
+</div>
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-8">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          The local weather for the Laurel, Va area.
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- VERSION 01 -->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-right">The weather for the Laurel, VA area.</h1>
+    </div>
+  </div>
+  <div class="row"> -->
+<!-- Forecast -->
+<!--     <div class="col-md-2">
+      <h3 class="date text-uppercase text-center">Sun <br>09</h3>
+
+      <canvas id="cloudy" class="img img-responsive center-block" width="80" height="80"></canvas>
+
+      <h3 class="temp text-center">86 F</h3>
+    </div>
+ -->
+<!-- Today's temp -->
+<!--     <div class="col-md-2 weatherContainer">
+      <h3 class="todayDate text-uppercase text-center"><span id="dayName">Mon</span><br><span id="dayNum"></span></h3>
+
+      <canvas id="clear-day" class="img img-responsive center-block" width="80" height="80"></canvas>
+
+      
+      <h3 class="todayTemp text-center">86 F</h3>
+      <span id="description" class=" text-capitalize"></span>
+
+      <div class="row">
+        <div>
+          <h1 id="monthYear" class="text-center">
+                <p class="text-center month"></p>
+              <div class="year"></div></h1>
+        </div>
+      </div>
+    </div> -->
+<!-- END Today's Temp -->
+
+<!--     <div class="col-md-2">
+      <h3 class="date text-uppercase text-center">Tue <br>11</h3>
+
+      <canvas id="cloudy" class="img img-responsive center-block" width="80" height="80"></canvas>
+
+      <h3 class="temp text-center">86 F</h3>
+    </div>
+
+    <div class="col-md-2">
+      <h3 class="date text-uppercase text-center">Wed <br>12</h3>
+
+      <canvas id="rain" class="img img-responsive center-block" width="80" height="80"></canvas>
+
+      <h3 class="temp text-center">86 F</h3>
+    </div>
+
+    <div class="col-md-2">
+      <h3 class="date text-uppercase text-center">Thu <br>13</h3>
+
+      <canvas id="fog" class="img img-responsive center-block" width="80" height="80"></canvas>
+
+      <h3 class="temp text-center">86 F</h3>
+    </div>
+
+    <div class="col-md-2">
+      <h3 class="date text-uppercase text-center">Fri <br>14</h3>
+
+      <canvas id="wind" class="img img-responsive center-block" width="80" height="80"></canvas>
+
+      <h3 class="temp text-center">86 F</h3>
+
+    </div> -->
+<!-- END Forecast -->
+
+
+<!--   </div> -->
+<!--   <div class="row">
+    <div class="col-md-12">
+      <p class="text-right description">lsn;dklfn;sanf</p>
+    </div> -->
+<!--   </div>
+</div> -->
+<!-- END VERSION 01 -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
